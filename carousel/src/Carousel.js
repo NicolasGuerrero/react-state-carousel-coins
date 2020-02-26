@@ -15,12 +15,12 @@ function Carousel(props) {
   // conditional- if en of carousel, go back to start
   // change left arrow function to goBackward
   const leftButton = <i
-                        className="fas fa-chevron-circle-left fa-2x ${leftIconHidden"
+                        className="fas fa-chevron-circle-left fa-2x"
                         onClick={goBackward}
                         data-testid="left-arrow"
                       />;
   const rightButton = <i
-                        className="fas fa-chevron-circle-right fa-2x ${leftIconHidden"
+                        className="fas fa-chevron-circle-right fa-2x"
                         onClick={goForward}
                         data-testid="right-arrow"
                       />;
@@ -35,7 +35,7 @@ function Carousel(props) {
           currNum={cardIdx + 1}
           totalNum={total}
         />
-        {(cardIdx !== 2) ? rightButton: ""}
+        {(cardIdx !== total-1) ? rightButton: ""}
       </div>
     </div>
   );
